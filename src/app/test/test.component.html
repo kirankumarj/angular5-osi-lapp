@@ -1,0 +1,29 @@
+<div *ngFor="let list of lists">
+<select>
+  <div *ngFor="let listo of listOption">
+      <!-- <div *ngIf="true;then trueS else falseS">here is ignored</div>
+      <template #trueS>
+          <option [value]="listo.name">{{listo.name}}</option>
+      </template>
+
+      <template #falseS>
+          <option [value]="listo.name">{{listo.name}}</option>
+      </template> -->
+
+      <option [value]="listo.name" [selected]="checkEqual(listo.name,list.name)">{{listo.name}}</option>
+    </div>
+</select>
+<input type="date" placeholder="Select Start date" [value]=list.startDate>
+<input type="date" placeholder="Select End date" [value]=list.endDate>
+</div>
+
+
+<!-- <div class="well">
+    <div id="datetimepicker1" class="input-append date">
+      <input data-format="dd/MM/yyyy hh:mm:ss" type="text"></input>
+      <span class="add-on">
+        <i data-time-icon="icon-time" data-date-icon="icon-calendar">
+        </i>
+      </span>
+    </div>
+  </div> -->

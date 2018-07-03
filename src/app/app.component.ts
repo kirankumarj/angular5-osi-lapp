@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+declare var jquery:any;
+declare var $ :any;
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'FMS....';
+  isLogin:boolean;
+  constructor(){
+    $('#menu-outer').hide();
+  }
 }

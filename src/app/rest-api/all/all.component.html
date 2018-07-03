@@ -1,0 +1,24 @@
+<h3>List Of user....!</h3>
+<div class="row" style="background:blueviolet;">
+    <div class="col-sm-4">
+        <label>Name</label>	
+    </div>
+    <div class="col-sm-4">
+        <label>Role</label>	
+    </div>
+    <div class="col-sm-4">
+        <label>ID</label>	
+    </div>
+  
+  </div>
+  <div class="row" style="background:lightcyan;" *ngFor="let user of users">
+      <div class="col-sm-4">
+          <label>{{user.name}}</label>	
+      </div>
+      <div class="col-sm-4">
+          <label>{{ user.role }}</label>	
+      </div>
+      <div class="col-sm-4">
+          <label>{{ user.id }}</label>	
+      </div>
+</div>

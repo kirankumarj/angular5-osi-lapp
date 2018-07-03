@@ -1,0 +1,34 @@
+<div style="padding-left:20px;padding-right:20px;">
+
+<h3>Enroll User list</h3>
+
+<ul id="view-horizontal-list">
+  <li (mouseover)="SelectedTodayDate()"> Today </li>
+  <li (mouseover)="SelectedOtherDate()"> Select the Day  </li>
+</ul>
+
+
+<div *ngIf="isTodayDateSelected" style="padding: 10px; border: 5px solid #a3066f;">
+  <h3>Total Emp Enroll :: {{ details.length }} </h3>
+  <div *ngFor="let detail of details" style="padding: 10px; border: 1px solid violet; background: whitesmoke;">
+    {{ detail.name }}
+    {{ detail.id }}
+    {{ detail.breakfast }}
+    {{ detail.lunch }}
+    {{ detail.dinner }}
+  </div>
+</div>
+
+<div *ngIf="isOtherDateSelected" style="padding: 10px; border: 5px solid #a3066f;">
+  Select the Date <input type="date" [(ngModel)]="selectDate" (change)="getSelectedDateData()">
+  <h3>Total Emp Enroll :: {{ otherDatedetails.length }} </h3>
+  <div *ngFor="let detail of otherDatedetails" style="padding: 10px; border: 1px solid violet; background: whitesmoke;">
+    {{ detail.name }}
+    {{ detail.id }}
+    {{ detail.breakfast }}
+    {{ detail.lunch }}
+    {{ detail.dinner }}
+  </div>
+
+</div>
+</div>

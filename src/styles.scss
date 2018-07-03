@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+	background: lightblue;
+}
+
+#horizontal-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+
+#horizontal-list li {
+    float: left;
+}
+
+#horizontal-list li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+#horizontal-list li a:hover {
+    background-color: #111111;
+}
